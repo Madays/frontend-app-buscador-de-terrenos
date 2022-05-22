@@ -1,0 +1,14 @@
+.nkn-vertical-align {
+  height: 400px;
+}
+
+.nkn-error-message {
+  color: red;
+  background-color: #fff;
+  margin-top: 4px;
+  padding: 4px;
+}
+
+.nkn-input {
+  color: #fff;
+}
