@@ -1,8 +1,10 @@
 import { Formik, useFormik } from "formik";
 import * as Yup from 'yup';
-import '../style/Form.css'
+import { useNavigate } from 'react-router-dom';
+import '../style/Form.css';
 
-const Form = () => {
+const Form = ({btnSubmit}) => {
+  const navigate = useNavigate();
   const formik = useFormik({
       initialValues: { place: '', area: ''},
       validationSchema: Yup.object({
@@ -12,6 +14,8 @@ const Form = () => {
           .required('El área es un valor requerido')
       }),
       onSubmit: values => {
+        navigate('/resultados?place='+ values.place + '&area=' + values.area)
+
           console.log(values);
       }
   })
@@ -52,7 +56,7 @@ const Form = () => {
         </div>
         <div className="nkn-row-padding">
           <div className="nkn-col-s12">
-            <input type="submit" value="Buscar" className="nkn-button"/>
+            <input type="submit" value={btnSubmit} className="nkn-button"/>
           </div>
         </div>
     </form>

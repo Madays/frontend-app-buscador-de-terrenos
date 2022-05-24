@@ -1,3 +1,9 @@
 header {
   background-color: #fff;
 }
+.active {
+  color: rgba(255, 79, 0, 1);
+}
+.nkn-navbar .nkn-navbar-content .nkn-nav .nkn-nav-item {
+  line-height: 42px;
+}

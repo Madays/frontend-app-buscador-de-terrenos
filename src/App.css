@@ -10,13 +10,19 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: .875rem;
+}
+
+.page-search-form {
   background-image: linear-gradient(rgba(93, 176, 83, 0.56), rgba(0, 0, 0, 0.56)),
                   url("./imagenes/main2.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 83px);
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nkn-button {
@@ -26,8 +32,5 @@ body {
   border: solid 1px rgba(255, 79, 0, 1);
 }
 
-.nkn-label {
-  color: #fff;
-}
 
 
