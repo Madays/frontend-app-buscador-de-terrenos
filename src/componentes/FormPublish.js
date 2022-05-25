@@ -33,7 +33,7 @@ const FormPublish = () => {
     onSubmit: (values) => {
       const token = localStorage.getItem("token");
       axios
-        .post(`http://localhost:4000/api/terrenos`, values, {
+        .post(`https://busca-terrenos.herokuapp.com/api/terrenos`, values, {
           headers: {
             Authorization: `Basic ${token}`,
           },

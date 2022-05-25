@@ -22,7 +22,7 @@ const MapView = () => {
     const areaTo = parseInt(searchParams.get("area"), 10) + 20;
     const filterPlace = searchParams.get("place").toUpperCase();
 
-    axios.get(`http://localhost:4000/api/terrenos`).then((res) => {
+    axios.get(`https://busca-terrenos.herokuapp.com/api/terrenos`).then((res) => {
       const terrenos = res.data;
       const terrenosFiltrados = terrenos.filter(
         (t) =>

@@ -18,7 +18,7 @@ function ModalLogin() {
     }),
     onSubmit: values => {
         console.log(values);
-        const url = `http://localhost:4000/api/login`;
+        const url = `https://busca-terrenos.herokuapp.com/api/login`;
         axios.post(url, values).then((res) => {
           const data = res.data;
           localStorage.setItem('token',data.token)
