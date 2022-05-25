@@ -15,8 +15,6 @@ const Form = ({btnSubmit}) => {
       }),
       onSubmit: values => {
         navigate('/resultados?place='+ values.place + '&area=' + values.area)
-
-          console.log(values);
       }
   })
   return <>

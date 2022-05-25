@@ -1,11 +1,12 @@
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 import { Formik, useFormik } from "formik";
 import * as Yup from 'yup';
 import closeIcon from '../imagenes/close.svg';
 import '../style/ModalLogin.css';
 
 function ModalLogin() {
-
+  const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: { username: '', password: ''},
@@ -19,8 +20,10 @@ function ModalLogin() {
         console.log(values);
         const url = `http://localhost:4000/api/login`;
         axios.post(url, values).then((res) => {
-          const loginData = res.data;
-          console.log(loginData)
+          const data = res.data;
+          localStorage.setItem('token',data.token)
+          navigate('/buscar')
+          window.location.reload();
         });
     }
   })

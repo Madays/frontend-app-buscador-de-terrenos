@@ -10,7 +10,7 @@ import Markers from "./Markers";
 const MapView = () => {
   const [state, setState] = useState({
     currentLocation: { lat: "-12.866194544722239", lng: "-72.6940012478429" },
-    zoom: 13,
+    zoom: 5,
   });
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -21,17 +21,15 @@ const MapView = () => {
     const areaFrom = parseInt(searchParams.get("area"), 10) - 20;
     const areaTo = parseInt(searchParams.get("area"), 10) + 20;
     const filterPlace = searchParams.get("place").toUpperCase();
-    console.log(areaFrom,areaTo)
 
     axios.get(`http://localhost:4000/api/terrenos`).then((res) => {
       const terrenos = res.data;
-      setPlaces(
-        terrenos.filter(
-          (t) =>
-            t.name.toUpperCase().includes(filterPlace) &&
-            (areaFrom < t.area ) && (t.area < areaTo)
-        )
-      );
+      const terrenosFiltrados = terrenos.filter(
+        (t) =>
+          t.name.toUpperCase().includes(filterPlace) &&
+          (areaFrom < t.area ) && (t.area < areaTo)
+      )
+      setPlaces(terrenosFiltrados);
     });
   }, []);
 
