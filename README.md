@@ -10,9 +10,9 @@ Leaflet
 ```
 | Description | Route |
 | ------------- | ------------- |
-| Raiz  | https://flourishing-marshmallow-8cb81b.netlify.app/  |
-| Buscar terreno  | https://flourishing-marshmallow-8cb81b.netlify.app/buscar |
-| Publicar terreno  | https://flourishing-marshmallow-8cb81b.netlify.app/publicar  |
+| Raiz  | https://wonderful-flan-98013a.netlify.app/  |
+| Buscar terreno  | https://wonderful-flan-98013a.netlify.app/buscar |
+| Publicar terreno  | https://wonderful-flan-98013a.netlify.app/publicar  |
 ```
 # Autenticación
 Autenticación con token
@@ -22,7 +22,7 @@ username:admin
 password:M@keItReal
 ```
 # Link de la aplicación
-https://flourishing-marshmallow-8cb81b.netlify.app/
+https://wonderful-flan-98013a.netlify.app/
 # Funcionalidades
 Login
 Logout
