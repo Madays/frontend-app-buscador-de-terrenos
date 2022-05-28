@@ -1,3 +1,4 @@
-.nkn-modal .nkn-label {
+.nkn-modal .nkn-label,
+.nkn-modal .nkn-form .nkn-input {
   color: #545454;
 }

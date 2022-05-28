@@ -1,11 +1,14 @@
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
-import { Formik, useFormik } from "formik";
+import { useFormik } from "formik";
 import * as Yup from 'yup';
 import closeIcon from '../imagenes/close.svg';
 import '../style/ModalLogin.css';
+import { useState } from "react";
 
 function ModalLogin() {
+  const [loginInvalid, setLoginInvalid] = useState(false);
+
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -20,10 +23,14 @@ function ModalLogin() {
         console.log(values);
         const url = `https://busca-terrenos.herokuapp.com/api/login`;
         axios.post(url, values).then((res) => {
+          console.log(res)
           const data = res.data;
           localStorage.setItem('token',data.token)
           navigate('/buscar')
           window.location.reload();
+
+        }).catch(err => {
+          setLoginInvalid(true)
         });
     }
   })
@@ -60,6 +67,7 @@ function ModalLogin() {
                             <label className="nkn-label" htmlFor="password">Password:</label>
                             <input
                               className="nkn-input"
+                              style={{color: '#545454'}}
                               id="password"
                               type="password"
                               name="password"
@@ -77,6 +85,7 @@ function ModalLogin() {
                           <input type="submit" value='Login' className="nkn-button"/>
                         </div>
                     </div>
+                    {loginInvalid?(<div className="nkn-error-message nkn-center">Login incorrecto</div>):null}
                 </form>
             </div>
         </div>
