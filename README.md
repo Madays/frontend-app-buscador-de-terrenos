@@ -2,10 +2,12 @@
 # Tecnologías usadas
 React/React hooks
 # Librerias usadas
-Axios
-Formik
-Yup
-Leaflet
+- Axios
+- Formik
+- Yup
+- Leaflet
+# Framework CSS
+- Unkuna
 # Rutas
 
 | Description | Route |
@@ -31,10 +33,10 @@ Lugar: Cusco
 Área: 300
 ```
 # Funcionalidades
-Login
-Logout
-Buscar terreno
-Publicar terreno
+- Login
+- Logout
+- Buscar terreno
+- Publicar terreno
 # Api backend producción
 https://busca-terrenos.herokuapp.com
 # Getting Started with Create React App
