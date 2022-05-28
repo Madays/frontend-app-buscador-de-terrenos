@@ -7,28 +7,28 @@ Formik
 Yup
 Leaflet
 # Rutas
-```
+
 | Description | Route |
 | ------------- | ------------- |
 | Raiz  | https://wonderful-flan-98013a.netlify.app/  |
 | Buscar terreno  | https://wonderful-flan-98013a.netlify.app/buscar |
 | Publicar terreno  | https://wonderful-flan-98013a.netlify.app/publicar  |
-```
+
 # Autenticación
 Autenticación con token
 ## Login
-```
+```bash
 username:admin
 password:M@keItReal
 ```
 # Link de la aplicación
 https://wonderful-flan-98013a.netlify.app/
-```
+
+```bash
 Datos existentes para la busqueda de terrenos
 En la ruta: https://wonderful-flan-98013a.netlify.app/buscar
 Lugar: Cusco
 Área: 300
-
 ```
 # Funcionalidades
 Login
