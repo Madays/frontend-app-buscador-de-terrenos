@@ -23,6 +23,13 @@ password:M@keItReal
 ```
 # Link de la aplicación
 https://wonderful-flan-98013a.netlify.app/
+```
+Datos existentes para la busqueda de terrenos
+En la ruta: https://wonderful-flan-98013a.netlify.app/buscar
+Lugar: Cusco
+Área: 300
+
+```
 # Funcionalidades
 Login
 Logout
